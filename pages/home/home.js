@@ -1,13 +1,25 @@
 // pages/home/home.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    name: "codewhy",
+    students: [
+      { id: 110, name: "kobe", age: 30},
+      { id: 120, name: "aobe", age: 40 },
+      { id: 130, name: "cobe", age: 50 },
+      { id: 140, name: "sobe", age: 60 },
+      { id: 150, name: "dobe", age: 70 },
+    ],
+    count: 0,
   },
-
+  handleButtonClick(){
+    console.log("按钮发生了点击");
+    this.setData({
+      count: this.data.count +1 
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
